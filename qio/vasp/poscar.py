@@ -1,3 +1,6 @@
+import numpy as np
+from collections import OrderedDict
+
 
 def read_poscar(f):
     def read_switch(f):

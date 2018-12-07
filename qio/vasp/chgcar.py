@@ -1,6 +1,9 @@
+import numpy as np
+from . import poscar
+
 
 def read_chgcar(f):
-    system, unit, cell, elem_num, coordinates, binds = read_poscar(f)
+    system, unit, cell, elem_num, coordinates, binds = poscar.read_poscar(f)
     next(f)  # blank line
     grid_shape = np.array([int(w) for w in next(f).split()])
     grid = []
